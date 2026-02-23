@@ -1,4 +1,4 @@
-# Satisfactory Resource Calculator Carlos Vilches
+# Satisfactory Resource Calculator // Carlos Vilches
 
 ## Descripció:
 
@@ -6,7 +6,9 @@ L'objectiu de l'aplicacó es portar un recompte dels materials utilitzats en el 
 
 ## Stack Tècnic:
 
-Angular 18, SCSS, Standalone...
+- Angular 18
+- SCSS
+- Standalone
 
 ## Estat:
 
