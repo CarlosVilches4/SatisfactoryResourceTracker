@@ -1,0 +1,8 @@
+<h2>Lista de Taladros</h2>
+
+<app-buscador (buscar)="onBuscar($event)"></app-buscador>
+
+<app-targeta-taladro
+    *ngFor="let item of materialesFiltrados"
+    [taladro]="item">
+</app-targeta-taladro>
