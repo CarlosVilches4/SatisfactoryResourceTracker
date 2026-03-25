@@ -4,6 +4,6 @@ export interface Taladro {
     material: string;
     tier_beta: string;
     material_utilizado: number;
-    porcentaje: number;
+    overclock: number;
     color: string;
 }

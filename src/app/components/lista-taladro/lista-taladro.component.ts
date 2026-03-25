@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NgFor } from '@angular/common';
+import { NgFor, NgIf } from '@angular/common';
 import { MATERIAL_TALADRO_MOCK } from '../../mocks/dades-mock';
 import { TargetaTaladroComponent } from '../targeta-taladro/targeta-taladro.component';
 import { BuscadorComponent } from '../buscador/buscador.component';
@@ -7,7 +7,7 @@ import { BuscadorComponent } from '../buscador/buscador.component';
 @Component({
   selector: 'app-lista-taladros',
   standalone: true,
-  imports: [NgFor, TargetaTaladroComponent, BuscadorComponent],
+  imports: [NgFor, TargetaTaladroComponent, BuscadorComponent, NgIf],
   templateUrl: './lista-taladro.component.html'
 })
 export class ListaTaladrosComponent {
@@ -28,4 +28,8 @@ export class ListaTaladrosComponent {
       item.tier_beta.toLowerCase().includes(texto)
     );
   }
+
+  trackById(index: number, item: any) {
+  return item.id;
+}
 }

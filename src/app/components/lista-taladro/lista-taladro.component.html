@@ -2,7 +2,11 @@
 
 <app-buscador (buscar)="onBuscar($event)"></app-buscador>
 
-<app-targeta-taladro
-    *ngFor="let item of materialesFiltrados"
-    [taladro]="item">
-</app-targeta-taladro>
+<div *ngIf="materialesFiltrados.length > 0; else sinResultados">
+    <app-targeta-taladro *ngFor="let item of materialesFiltrados; trackBy: trackById" [taladro]="item">
+    </app-targeta-taladro>
+</div>
+
+<ng-template #sinResultados>
+  <p>No se encontraron resultados</p>
+</ng-template>

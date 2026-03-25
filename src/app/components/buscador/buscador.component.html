@@ -1,5 +1,27 @@
-<input
-      type="text"
-      placeholder="Buscar..."
-      (input)="onInput($event)"
-/>
+<form #form="ngForm" (ngSubmit)="onSubmit()">
+
+  <input
+    type="text"
+    name="busqueda"
+    [(ngModel)]="textoBusqueda"
+    #busqueda="ngModel"
+    required
+    minlength="3"
+    placeholder="Buscar..."
+  />
+
+  <div *ngIf="busqueda.invalid && busqueda.touched">
+
+    <small *ngIf="busqueda.errors?.['minlength']">
+      Mínimo 3 caracteres
+    </small>
+
+  </div>
+
+  <button type="submit" [disabled]="form.invalid">
+    Buscar
+  </button>
+
+  <button type="button" (click)="limpiar()"> Limpiar </button>
+
+</form>
