@@ -1,10 +1,8 @@
-<h2>Lista de Taladros</h2>
-
 <app-buscador (buscar)="onBuscar($event)"></app-buscador>
 
-<div *ngIf="materialesFiltrados.length > 0; else sinResultados">
-    <app-targeta-taladro *ngFor="let item of materialesFiltrados; trackBy: trackById" [taladro]="item">
-    </app-targeta-taladro>
+<div class="contenedor-flex" *ngIf="materialesFiltrados.length > 0; else sinResultados">
+  <app-targeta-taladro *ngFor="let item of materialesFiltrados; trackBy: trackById" [taladro]="item">
+  </app-targeta-taladro>
 </div>
 
 <ng-template #sinResultados>

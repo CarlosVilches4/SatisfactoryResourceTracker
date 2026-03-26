@@ -33,7 +33,7 @@ export class TargetaTaladroComponent {
         return "Copper_Ore.png";
 
       case "hierro":
-        return "Iron_ore.png";
+        return "Iron_Ore.png";
 
       case "caliza":
         return "Limestone.png";

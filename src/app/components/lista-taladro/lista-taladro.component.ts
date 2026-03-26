@@ -8,7 +8,8 @@ import { BuscadorComponent } from '../buscador/buscador.component';
   selector: 'app-lista-taladros',
   standalone: true,
   imports: [NgFor, TargetaTaladroComponent, BuscadorComponent, NgIf],
-  templateUrl: './lista-taladro.component.html'
+  templateUrl: './lista-taladro.component.html',
+  styleUrl: './lista-taladro.component.scss'
 })
 export class ListaTaladrosComponent {
   materiales = MATERIAL_TALADRO_MOCK;
@@ -30,6 +31,6 @@ export class ListaTaladrosComponent {
   }
 
   trackById(index: number, item: any) {
-  return item.id;
-}
+    return item.id;
+  }
 }
