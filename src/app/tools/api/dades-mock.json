@@ -7,7 +7,13 @@
 		"tier_beta" : "puro",
 		"material_utilizado" : 382.50,
 		"overclock" : 100.00,
-		"color" : "naranja"
+		"color" : "naranja",
+		"descripcio" : "",
+		"categoria" : "",
+		"preu" : "",
+		"imatge" : "",
+		"stock" : "",
+		"popular" : ""
 	},
 	{
 		"id" : 2,
@@ -16,7 +22,13 @@
 		"tier_beta" : "normal",
 		"material_utilizado" : 60.00,
 		"overclock" : 100.00,
-		"color" : "verde"
+		"color" : "verde",
+		"descripcio" : "",
+		"categoria" : "",
+		"preu" : "",
+		"imatge" : "",
+		"stock" : "",
+		"popular" : ""
 	},
 	{
 		"id" : 3,
@@ -25,7 +37,13 @@
 		"tier_beta" : "impuro",
 		"material_utilizado" : 30.00,
 		"overclock" : 100.00,
-		"color" : "rojo"
+		"color" : "rojo",
+		"descripcio" : "",
+		"categoria" : "",
+		"preu" : "",
+		"imatge" : "",
+		"stock" : "",
+		"popular" : ""
 	},
 	{
 		"id" : 4,
@@ -34,7 +52,13 @@
 		"tier_beta" : "impuro",
 		"material_utilizado" : 30.00,
 		"overclock" : 100.00,
-		"color" : "rojo"
+		"color" : "rojo",
+		"descripcio" : "",
+		"categoria" : "",
+		"preu" : "",
+		"imatge" : "",
+		"stock" : "",
+		"popular" : ""
 	},
 	{
 		"id" : 5,
@@ -43,7 +67,13 @@
 		"tier_beta" : "puro",
 		"material_utilizado" : 240.00,
 		"overclock" : 100.00,
-		"color" : "rosa claro"
+		"color" : "rosa claro",
+		"descripcio" : "",
+		"categoria" : "",
+		"preu" : "",
+		"imatge" : "",
+		"stock" : "",
+		"popular" : ""
 	},
 	{
 		"id" : 6,
@@ -52,7 +82,13 @@
 		"tier_beta" : "puro",
 		"material_utilizado" : 120.00,
 		"overclock" : 100.00,
-		"color" : "verde lima"
+		"color" : "verde lima",
+		"descripcio" : "",
+		"categoria" : "",
+		"preu" : "",
+		"imatge" : "",
+		"stock" : "",
+		"popular" : ""
 	},
 	{
 		"id" : 7,
@@ -61,7 +97,13 @@
 		"tier_beta" : "normal",
 		"material_utilizado" : 120.00,
 		"overclock" : 100.00,
-		"color" : "blanco"
+		"color" : "blanco",
+		"descripcio" : "",
+		"categoria" : "",
+		"preu" : "",
+		"imatge" : "",
+		"stock" : "",
+		"popular" : ""
 	},
 	{
 		"id" : 8,
@@ -70,7 +112,13 @@
 		"tier_beta" : "puro",
 		"material_utilizado" : 231.90,
 		"overclock" : 100.00,
-		"color" : "amarillo"
+		"color" : "amarillo",
+		"descripcio" : "",
+		"categoria" : "",
+		"preu" : "",
+		"imatge" : "",
+		"stock" : "",
+		"popular" : ""
 	},
 	{
 		"id" : 9,
@@ -79,7 +127,13 @@
 		"tier_beta" : "puro",
 		"material_utilizado" : 0.00,
 		"overclock" : 100.00,
-		"color" : "amarillo"
+		"color" : "amarillo",
+		"descripcio" : "",
+		"categoria" : "",
+		"preu" : "",
+		"imatge" : "",
+		"stock" : "",
+		"popular" : ""
 	},
 	{
 		"id" : 10,
@@ -88,7 +142,13 @@
 		"tier_beta" : "normal",
 		"material_utilizado" : 287.70,
 		"overclock" : 250.00,
-		"color" : "rojo"
+		"color" : "rojo",
+		"descripcio" : "",
+		"categoria" : "",
+		"preu" : "",
+		"imatge" : "",
+		"stock" : "",
+		"popular" : ""
 	},
 	{
 		"id" : 11,
@@ -97,7 +157,13 @@
 		"tier_beta" : "puro",
 		"material_utilizado" : 436.69,
 		"overclock" : 200.00,
-		"color" : "verde"
+		"color" : "verde",
+		"descripcio" : "",
+		"categoria" : "",
+		"preu" : "",
+		"imatge" : "",
+		"stock" : "",
+		"popular" : ""
 	},
 	{
 		"id" : 12,
@@ -106,7 +172,13 @@
 		"tier_beta" : "impuro",
 		"material_utilizado" : 60.00,
 		"overclock" : 200.00,
-		"color" : "rojo"
+		"color" : "rojo",
+		"descripcio" : "",
+		"categoria" : "",
+		"preu" : "",
+		"imatge" : "",
+		"stock" : "",
+		"popular" : ""
 	},
 	{
 		"id" : 13,
@@ -115,7 +187,13 @@
 		"tier_beta" : "normal",
 		"material_utilizado" : 210.00,
 		"overclock" : 200.00,
-		"color" : "verde"
+		"color" : "verde",
+		"descripcio" : "",
+		"categoria" : "",
+		"preu" : "",
+		"imatge" : "",
+		"stock" : "",
+		"popular" : ""
 	},
 	{
 		"id" : 14,
@@ -124,7 +202,13 @@
 		"tier_beta" : "normal",
 		"material_utilizado" : 137.50,
 		"overclock" : 150.00,
-		"color" : "azul"
+		"color" : "azul",
+		"descripcio" : "",
+		"categoria" : "",
+		"preu" : "",
+		"imatge" : "",
+		"stock" : "",
+		"popular" : ""
 	},
 	{
 		"id" : 15,
@@ -133,7 +217,13 @@
 		"tier_beta" : "normal",
 		"material_utilizado" : 265.65,
 		"overclock" : 250.00,
-		"color" : "rojo"
+		"color" : "rojo",
+		"descripcio" : "",
+		"categoria" : "",
+		"preu" : "",
+		"imatge" : "",
+		"stock" : "",
+		"popular" : ""
 	},
 	{
 		"id" : 16,
@@ -142,7 +232,13 @@
 		"tier_beta" : "normal",
 		"material_utilizado" : 0.00,
 		"overclock" : 250.00,
-		"color" : "azul"
+		"color" : "azul",
+		"descripcio" : "",
+		"categoria" : "",
+		"preu" : "",
+		"imatge" : "",
+		"stock" : "",
+		"popular" : ""
 	},
 	{
 		"id" : 17,
@@ -151,7 +247,13 @@
 		"tier_beta" : "normal",
 		"material_utilizado" : 45.00,
 		"overclock" : 100.00,
-		"color" : "verde"
+		"color" : "verde",
+		"descripcio" : "",
+		"categoria" : "",
+		"preu" : "",
+		"imatge" : "",
+		"stock" : "",
+		"popular" : ""
 	},
 	{
 		"id" : 18,
@@ -160,7 +262,13 @@
 		"tier_beta" : "impuro",
 		"material_utilizado" : 112.50,
 		"overclock" : 200.00,
-		"color" : "rojo"
+		"color" : "rojo",
+		"descripcio" : "",
+		"categoria" : "",
+		"preu" : "",
+		"imatge" : "",
+		"stock" : "",
+		"popular" : ""
 	},
 	{
 		"id" : 19,
@@ -169,7 +277,13 @@
 		"tier_beta" : "normal",
 		"material_utilizado" : 180.00,
 		"overclock" : 150.00,
-		"color" : "blanco"
+		"color" : "blanco",
+		"descripcio" : "",
+		"categoria" : "",
+		"preu" : "",
+		"imatge" : "",
+		"stock" : "",
+		"popular" : ""
 	},
 	{
 		"id" : 20,
@@ -178,7 +292,13 @@
 		"tier_beta" : "normal",
 		"material_utilizado" : 75.00,
 		"overclock" : 125.00,
-		"color" : "verde"
+		"color" : "verde",
+		"descripcio" : "",
+		"categoria" : "",
+		"preu" : "",
+		"imatge" : "",
+		"stock" : "",
+		"popular" : ""
 	},
 	{
 		"id" : 21,
@@ -187,7 +307,13 @@
 		"tier_beta" : "puro",
 		"material_utilizado" : 216.00,
 		"overclock" : 100.00,
-		"color" : "rojo"
+		"color" : "rojo",
+		"descripcio" : "",
+		"categoria" : "",
+		"preu" : "",
+		"imatge" : "",
+		"stock" : "",
+		"popular" : ""
 	},
 	{
 		"id" : 22,
@@ -196,7 +322,13 @@
 		"tier_beta" : "impuro",
 		"material_utilizado" : 50.00,
 		"overclock" : 200.00,
-		"color" : "azul claro"
+		"color" : "azul claro",
+		"descripcio" : "",
+		"categoria" : "",
+		"preu" : "",
+		"imatge" : "",
+		"stock" : "",
+		"popular" : ""
 	},
 	{
 		"id" : 23,
@@ -205,7 +337,13 @@
 		"tier_beta" : "impuro",
 		"material_utilizado" : 60.00,
 		"overclock" : 200.00,
-		"color" : "rosa claro"
+		"color" : "rosa claro",
+		"descripcio" : "",
+		"categoria" : "",
+		"preu" : "",
+		"imatge" : "",
+		"stock" : "",
+		"popular" : ""
 	},
 	{
 		"id" : 24,
@@ -214,7 +352,13 @@
 		"tier_beta" : "impuro",
 		"material_utilizado" : 60.00,
 		"overclock" : 200.00,
-		"color" : "naranja"
+		"color" : "naranja",
+		"descripcio" : "",
+		"categoria" : "",
+		"preu" : "",
+		"imatge" : "",
+		"stock" : "",
+		"popular" : ""
 	},
 	{
 		"id" : 25,
@@ -223,7 +367,13 @@
 		"tier_beta" : "puro",
 		"material_utilizado" : 308.40,
 		"overclock" : 150.00,
-		"color" : "morado"
+		"color" : "morado",
+		"descripcio" : "",
+		"categoria" : "",
+		"preu" : "",
+		"imatge" : "",
+		"stock" : "",
+		"popular" : ""
 	},
 	{
 		"id" : 26,
@@ -232,7 +382,13 @@
 		"tier_beta" : "puro",
 		"material_utilizado" : 228.00,
 		"overclock" : 100.00,
-		"color" : "blanco"
+		"color" : "blanco",
+		"descripcio" : "",
+		"categoria" : "",
+		"preu" : "",
+		"imatge" : "",
+		"stock" : "",
+		"popular" : ""
 	},
 	{
 		"id" : 27,
@@ -241,7 +397,13 @@
 		"tier_beta" : "puro",
 		"material_utilizado" : 180.00,
 		"overclock" : 100.00,
-		"color" : "amarillo"
+		"color" : "amarillo",
+		"descripcio" : "",
+		"categoria" : "",
+		"preu" : "",
+		"imatge" : "",
+		"stock" : "",
+		"popular" : ""
 	},
 	{
 		"id" : 28,
@@ -250,7 +412,13 @@
 		"tier_beta" : "impuro",
 		"material_utilizado" : 135.00,
 		"overclock" : 250.00,
-		"color" : "negro"
+		"color" : "negro",
+		"descripcio" : "",
+		"categoria" : "",
+		"preu" : "",
+		"imatge" : "",
+		"stock" : "",
+		"popular" : ""
 	},
 	{
 		"id" : 29,
@@ -259,7 +427,13 @@
 		"tier_beta" : "normal",
 		"material_utilizado" : 120.00,
 		"overclock" : 100.00,
-		"color" : "marron"
+		"color" : "marron",
+		"descripcio" : "",
+		"categoria" : "",
+		"preu" : "",
+		"imatge" : "",
+		"stock" : "",
+		"popular" : ""
 	},
 	{
 		"id" : 30,
@@ -268,7 +442,13 @@
 		"tier_beta" : "puro",
 		"material_utilizado" : 145.00,
 		"overclock" : 100.00,
-		"color" : "dorado"
+		"color" : "dorado",
+		"descripcio" : "",
+		"categoria" : "",
+		"preu" : "",
+		"imatge" : "",
+		"stock" : "",
+		"popular" : ""
 	},
 	{
 		"id" : 31,
@@ -277,7 +457,13 @@
 		"tier_beta" : "puro",
 		"material_utilizado" : 39.00,
 		"overclock" : 100.00,
-		"color" : "naranja"
+		"color" : "naranja",
+		"descripcio" : "",
+		"categoria" : "",
+		"preu" : "",
+		"imatge" : "",
+		"stock" : "",
+		"popular" : ""
 	}
 ]
 }

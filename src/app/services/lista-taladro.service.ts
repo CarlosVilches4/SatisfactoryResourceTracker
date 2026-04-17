@@ -1,9 +1,10 @@
 import { Injectable, signal, computed  } from '@angular/core';
-import { Taladro } from '../models/taladro.model';
+import { Taladro, TaladroApiResponse } from '../models/taladro.model';
 import { environment } from '../../environments/environment.development';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
-import { catchError, tap } from 'rxjs/operators';
+import { catchError, tap, map } from 'rxjs/operators';
 import { of } from 'rxjs';
+import { adaptarElementsApi } from '../adaptadors/taladro.adaptador';
 
 @Injectable({
   providedIn: 'root'
@@ -26,8 +27,9 @@ export class ElementService {
     this.carregantSignal.set(true);
     this.errorSignal.set('');
 
-    this.http.get<Taladro[]>(`${this.apiUrl}/elements`)
+    this.http.get<TaladroApiResponse[]>(`${this.apiUrl}/elements`)
       .pipe(
+        map(adaptarElementsApi),
         tap(elements => {
           this.elementsSignal.set(elements);
           this.carregantSignal.set(false)
@@ -49,8 +51,9 @@ export class ElementService {
     this.carregantSignal.set(true);
     this.errorSignal.set('');
 
-    this.http.get<Taladro[]>(`${this.apiUrl}/elements?material=hierro`)
+    this.http.get<TaladroApiResponse[]>(`${this.apiUrl}/elements?material=hierro`)
       .pipe(
+        map(adaptarElementsApi),
         tap(elements => {
           this.elementsSignal.set(elements);
           this.carregantSignal.set(false);
@@ -77,8 +80,9 @@ export class ElementService {
     this.carregantSignal.set(true);
     this.errorSignal.set('');
 
-    this.http.get<Taladro[]>(`${this.apiUrl}/elements?q=${terme}`)
+    this.http.get<TaladroApiResponse[]>(`${this.apiUrl}/elements?q=${terme}`)
       .pipe(
+        map(adaptarElementsApi),
         tap(elements => {
           this.elementsSignal.set(elements);
           this.carregantSignal.set(false);
