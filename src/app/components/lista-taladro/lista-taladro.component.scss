@@ -1,0 +1,12 @@
+.contenedor-flex {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 400px));
+    gap: 4em;
+    padding: 2em;
+    justify-content: center;
+}
+
+.reintentarBtn{
+    background-color: #00ACC1;
+    border: 1px solid #097f8f;
+}

@@ -1,0 +1,18 @@
+<div *ngIf="elementService.carregant() == false">
+  <app-buscador (buscar)="onBuscar($event)"></app-buscador>
+
+  <div class="contenedor-flex" *ngIf="this.elementService.elements().length > 0; else sinResultados">
+    <app-targeta-taladro *ngFor="let item of elementService.elements(); trackBy: elementService.trackById" [taladro]="item">
+    </app-targeta-taladro>
+  </div>
+
+  <ng-template #sinResultados>
+    <div *ngIf="this.elementService.error() == ''; else error">
+        <p>No se encontraron resultados</p>
+    </div>
+    <ng-template #error>
+      <p>{{this.elementService.error()}}</p>
+      <Button class="reintentarBtn" (click)="retryConnection()">Reintentar</Button>
+    </ng-template>
+  </ng-template>
+</div>
