@@ -1,0 +1,11 @@
+<div class="card">
+      <div>
+            <p><strong>Tier:</strong> {{ taladro.tier_taladro }}</p>
+            <p><strong>Material:</strong> {{ taladro.material }}</p>
+            <p><strong>Tier Beta:</strong> {{ taladro.tier_beta }}</p>
+            <p><strong>Color:</strong> {{ taladro.color | uppercase}}</p>
+            <p><strong>Material Restante:</strong> {{ taladro.material_utilizado }}</p>
+            <p><strong>Overclock:</strong> {{ taladro.overclock }}</p>
+      </div>
+      <img [src]='imgUrl' />
+</div>

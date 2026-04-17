@@ -1,0 +1,21 @@
+.card{
+    border: 1px orangered solid;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+}
+
+img{
+    max-width: 10em;
+    max-height: 10em;
+}
+
+p{
+    color: #df7409;
+}
+
+strong{
+    color: #177986;
+}

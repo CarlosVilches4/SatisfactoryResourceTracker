@@ -9,7 +9,7 @@ import { ElementService } from './services/lista-taladro.service';
   standalone: true,
   imports: [RouterOutlet, ListaTaladrosComponent, NgIf],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrl: './app.component.scss',
 })
 export class AppComponent {
   title = 'SRT';
