@@ -1,0 +1,37 @@
+.preferits-panel {
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 2rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
+
+  h2 {
+    margin: 0 0 1rem;
+    color: #333;
+  }
+}
+
+.llista-preferits {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 400px));
+    gap: 4em;
+    padding: 2em;
+    justify-content: center;
+}
+
+
+.sense-preferits {
+  text-align: center;
+  padding: 2rem;
+  color: #666;
+
+  p {
+    margin: 0.5rem 0;
+  }
+
+  .ajuda {
+    font-size: 0.9rem;
+    color: #999;
+  }
+}

@@ -3,7 +3,7 @@ import { Taladro, TaladroApiResponse } from '../models/taladro.model';
 import { environment } from '../../environments/environment.development';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { catchError, tap, map } from 'rxjs/operators';
-import { of } from 'rxjs';
+import { of, Observable } from 'rxjs';
 import { adaptarElementsApi } from '../adaptadors/taladro.adaptador';
 
 @Injectable({
@@ -46,12 +46,12 @@ export class ElementService {
     console.log(this.elementsSignal());
   }
 
-  obtenirHierro(): void {
+  obtenirPopulars(): void {
 
     this.carregantSignal.set(true);
     this.errorSignal.set('');
 
-    this.http.get<TaladroApiResponse[]>(`${this.apiUrl}/elements?material=hierro`)
+    this.http.get<TaladroApiResponse[]>(`${this.apiUrl}/elements?esPopular=true`)
       .pipe(
         map(adaptarElementsApi),
         tap(elements => {
@@ -72,11 +72,6 @@ export class ElementService {
 
 
   cercar(terme: string): void {
-    if (!terme.trim()) {
-      this.obtenirTaladros();
-      return;
-    }
-
     this.carregantSignal.set(true);
     this.errorSignal.set('');
 
@@ -96,6 +91,13 @@ export class ElementService {
         })
       )
       .subscribe();
+  }
+
+  comprovarResultats(terme: string): Observable<Taladro[]> {
+  return this.http.get<TaladroApiResponse[]>(`${this.apiUrl}/elements?q=${terme}`)
+    .pipe(
+      map(adaptarElementsApi)
+    );
   }
 
   trackById(item: any) {

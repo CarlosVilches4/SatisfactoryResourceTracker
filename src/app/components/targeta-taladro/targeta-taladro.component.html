@@ -1,11 +1,14 @@
 <div class="card">
-      <div>
-            <p><strong>Tier:</strong> {{ taladro.tier_taladro }}</p>
+      <div class="info">
+            <p><strong>Tier:</strong> {{ taladro.nom }}</p>
             <p><strong>Material:</strong> {{ taladro.material }}</p>
-            <p><strong>Tier Beta:</strong> {{ taladro.tier_beta }}</p>
+            <p><strong>Tier Beta:</strong> {{ taladro.puresa }}</p>
             <p><strong>Color:</strong> {{ taladro.color | uppercase}}</p>
-            <p><strong>Material Restante:</strong> {{ taladro.material_utilizado }}</p>
-            <p><strong>Overclock:</strong> {{ taladro.overclock }}</p>
+            <p><strong>Material Restante:</strong> {{ taladro.materialUtilitzat }}</p>
+            <p><strong>Overclock:</strong> {{ taladro.percentatjeOverclock }}</p>
       </div>
       <img [src]='imgUrl' />
+      <div class="btn">
+            <button class="btn-preferit" [class.actiu]="preferitsService.esPreferit(taladro.id)" (click)="togglePreferit(taladro)">{{ preferitsService.esPreferit(taladro.id) ? '★' : '☆' }}</button>
+      </div>
 </div>

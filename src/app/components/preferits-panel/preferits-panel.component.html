@@ -1,0 +1,15 @@
+<div class="preferits-panel">
+  <h2>Els meus preferits ({{ preferitsService.totalPreferits() }})</h2>
+
+
+  <div class="llista-preferits" *ngIf="preferitsService.totalPreferits() > 0">
+    <div class="preferit-item" *ngFor="let preferit of preferitsService.preferits()" [class.seleccionat]="preferitSeleccionat?.id === preferit.id">
+      <app-targeta-taladro [taladro]="preferit"></app-targeta-taladro>
+    </div>
+  </div>
+
+
+  <div class="sense-preferits" *ngIf="preferitsService.preferits().length === 0">
+    <p>No tens preferits encara</p>
+    <p class="ajuda">Fes clic a l'estrella d'un element per afegir-lo als preferits</p>
+  </div>

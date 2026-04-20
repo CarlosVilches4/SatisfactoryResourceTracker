@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { UpperCasePipe } from '@angular/common';
 import { Taladro } from '../../models/taladro.model';
+import { PreferitsService } from '../../services/preferits.service';
 
 
 @Component({
@@ -12,6 +13,18 @@ import { Taladro } from '../../models/taladro.model';
 })
 export class TargetaTaladroComponent {
   @Input() taladro!: Taladro;
+
+  constructor(public preferitsService: PreferitsService){
+
+  }
+
+  togglePreferit(taladro: Taladro): void {
+    if (this.preferitsService.esPreferit(taladro.id)) {
+      this.preferitsService.eliminarPreferit(taladro.id);
+    } else {
+      this.preferitsService.afegirPreferit(taladro);
+    }
+  }
 
   get imgUrl(): string {
     return "img/" + this.getImg();
