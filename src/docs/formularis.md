@@ -17,4 +17,8 @@ Validador Asíncron:
 
 ### Comportament
 
-- **Debounce:** Evita cerques excessives mentre l'usuari escriu amb debounce de 400ms
+- Cerca automàtica amb debounce de 400 ms mentre l'usuari escriu.
+- Botó «Netejar» que apareix únicament quan el camp conté text.
+- Indicador visual («Validant...» o spinner) durant la validació asíncrona.
+- Missatges d'error visibles per a cadascuna de les validacions.
+- Els errors no s'han de mostrar fins que l'usuari hagi tocat el camp (ng-touched).
