@@ -1,5 +1,5 @@
 <div class="formulari-cerca">
-  <form [formGroup]="formulariCerca" (ngSubmit)="cercar()">
+  <form [formGroup]="formulariCerca">
     <div class="camp-cerca">
       <input type="text" formControlName="termeCerca" placeholder="Cerca elements..." class="input-cerca" [class.invalid]="termeInvalid">
       <div class="indicadors">
@@ -8,8 +8,5 @@
       </div>
     </div>
     <div class="missatge-error" *ngIf="termeInvalid">{{ missatgeError }}</div>
-    <div class="accions">
-      <button type="submit" class="btn-cercar" [disabled]="formulariCerca.invalid || estaCarregant">Cercar</button>
-    </div>
   </form>
 </div>

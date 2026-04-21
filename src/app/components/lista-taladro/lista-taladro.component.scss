@@ -6,7 +6,15 @@
     justify-content: center;
 }
 
+.tarjeta{
+    border: #df7409 2px solid;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
 .reintentarBtn{
     background-color: #00ACC1;
+    color: white;
+    width: 6rem;
+    height: 2rem;
     border: 1px solid #097f8f;
 }

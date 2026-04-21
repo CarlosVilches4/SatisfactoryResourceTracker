@@ -14,10 +14,13 @@ export class ElementService {
   private readonly elementsSignal = signal<Taladro[]>([]);
   private readonly carregantSignal = signal<Boolean>(false);
   private readonly errorSignal = signal<string | null>('');
+  private readonly senseResultatsSignal = signal(false);
+
 
   readonly elements = this.elementsSignal.asReadonly();
   readonly carregant = this.carregantSignal.asReadonly();
   readonly error = this.errorSignal.asReadonly();
+  readonly senseResultats = this.senseResultatsSignal.asReadonly();
 
   private readonly apiUrl = environment.apiUrl;
 
@@ -31,14 +34,19 @@ export class ElementService {
       .pipe(
         map(adaptarElementsApi),
         tap(elements => {
+          
+          this.senseResultatsSignal.set(elements.length === 0);
+
+        if (elements.length > 0) {
           this.elementsSignal.set(elements);
-          this.carregantSignal.set(false)
+        }
+
+        this.carregantSignal.set(false);
       }),
       catchError((error: HttpErrorResponse) => {
         const missatgeError = this.gestionarError(error);
         this.errorSignal.set(missatgeError);
         this.carregantSignal.set(false)
-        this.elementsSignal.set([]);
         return of([]);
       })
     )
@@ -106,14 +114,13 @@ export class ElementService {
 
   private gestionarError(error: HttpErrorResponse): string {
     if (error.error instanceof ErrorEvent) {
-      // Error de client o xarxa
       return `Error de xarxa: ${error.error.message}`;
     }
 
-    // Error del servidor
+  
     switch (error.status) {
       case 0:
-        return 'No es pot connectar al servidor. Comprova que json-server està actiu.';
+        return 'No es pot connectar al servidor.';
       case 404:
         return 'Endpoint no trobat. Verifica la URL de l\'API.';
       case 500:

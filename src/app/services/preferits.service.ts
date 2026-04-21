@@ -50,7 +50,37 @@ export class PreferitsService {
     this.desarPreferits();
   }
 
+  afegirNota(taladroId: number, nota: string): void {
+    this.preferitsSignal.update(preferit =>
+      preferit.map(p => {
+        if (p.id === taladroId) {
+          return { ...p, nota: [...(p.nota || []), nota] };
+        }
+        return p;
+      })
+    );
+    this.desarPreferits();
+  }
+
+  eliminarNota(taladroId: number, indexNota: number): void {
+    this.preferitsSignal.update(preferits =>
+      preferits.map(p => {
+        if (p.id === taladroId) {
+          const notesActualitzades = [...(p.nota || [])];
+          notesActualitzades.splice(indexNota, 1);
+          return { ...p, nota: notesActualitzades };
+        }
+        return p;
+      })
+    );
+    this.desarPreferits();
+  }
+
   esPreferit(taladroId: number): boolean {
     return this.preferitsSignal().some(p => p.id === taladroId);
+  }
+
+  obtenirPreferit(taladroId: number): Taladro | undefined {
+    return this.preferitsSignal().find(p => p.id === taladroId);
   }
 }

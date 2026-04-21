@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
 import { ElementService } from '../../services/lista-taladro.service';
 import { codiDisponibleValidator } from '../../validators/codi-disponible.validator';
-import { debounceTime } from 'rxjs/operators';
+import { debounceTime, distinctUntilChanged } from 'rxjs/operators';
 
 @Component({
   selector: 'app-formulari-cerca',
@@ -29,18 +29,21 @@ export class FormulariCercaComponent implements OnInit {
         ],
         asyncValidators: [
           codiDisponibleValidator(this.elementService)
-        ],
-        updateOn: 'blur'
+        ]
       }]
     });
 
-    this.formulariCerca.get('termeCerca')?.valueChanges
-      .pipe(debounceTime(400))
-      .subscribe(terme => {
-        if (this.formulariCerca.get('terme')?.valid) {
-          this.cercar();
-        }
-      });
+
+  const ctrl = this.formulariCerca.get('termeCerca')!;
+
+  ctrl.statusChanges
+    .pipe(debounceTime(400))
+    .subscribe(status => {
+      if (status === 'VALID') {
+        this.elementService.cercar(ctrl.value || '');
+      }
+    });
+
   }
 
   cercar(): void {
@@ -59,7 +62,7 @@ export class FormulariCercaComponent implements OnInit {
 
   get termeInvalid(): boolean {
     const control = this.formulariCerca.get('termeCerca');
-    return !!(control?.invalid && control?.touched);
+    return !!(control && control.invalid && (control.dirty || control.touched));
   }
 
   get missatgeError(): string {
@@ -67,9 +70,13 @@ export class FormulariCercaComponent implements OnInit {
     if (control?.hasError('minlength')) {
       return 'Mínim 2 caràcters';
     }
-    if (control?.hasError('maxlenght')) {
+    if (control?.hasError('maxlength')) {
       return 'Màxim 50 caràcters';
     }
+
+    if (control?.hasError('sensResultats')) {
+    return 'No s\'han trobat resultats';
+  }
     return '';
   }
 }

@@ -78,30 +78,6 @@
     margin-top: -0.5rem;
   }
 
-  .accions {
-    display: flex;
-    gap: 1rem;
-
-    .btn-cercar {
-      background-color: #00ACC1;
-      color: white;
-      border: none;
-      padding: 0.75rem 2rem;
-      border-radius: 4px;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: background-color 0.3s;
-
-      &:hover:not(:disabled) {
-        background-color: #097f8f;
-      }
-
-      &:disabled {
-        background-color: #bdc3c7;
-        cursor: not-allowed;
-      }
-    }
-  }
 }
 
 @keyframes spin {

@@ -12,6 +12,7 @@ export interface Taladro {
     imatgeUrl: string;
     esPopular: boolean;
     unitats: number;
+    nota?: string[];
 }
 
 export interface TaladroApiResponse{

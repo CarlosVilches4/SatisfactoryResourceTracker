@@ -1,10 +1,10 @@
 <div class="preferits-panel">
-  <h2>Els meus preferits ({{ preferitsService.totalPreferits() }})</h2>
+  <h2>Els meus preferits ({{ preferitsService.preferits().length }})</h2>
 
 
-  <div class="llista-preferits" *ngIf="preferitsService.totalPreferits() > 0">
+  <div class="llista-preferits" *ngIf="preferitsService.preferits().length > 0">
     <div class="preferit-item" *ngFor="let preferit of preferitsService.preferits()" [class.seleccionat]="preferitSeleccionat?.id === preferit.id">
-      <app-targeta-taladro [taladro]="preferit"></app-targeta-taladro>
+        <app-targeta-taladro [taladro]="preferit" (click)="seleccionarPreferit(preferit)"></app-targeta-taladro>
     </div>
   </div>
 
@@ -13,3 +13,22 @@
     <p>No tens preferits encara</p>
     <p class="ajuda">Fes clic a l'estrella d'un element per afegir-lo als preferits</p>
   </div>
+
+
+  <div class="panel-notes" *ngIf="preferitSeleccionat">
+    <div class="notes-header">
+      <button class="btn-tancar" (click)="tancarPanel()">✕</button>
+    </div>
+
+    <form [formGroup]="formulariNotes">
+      <div class="notes-llista" formArrayName="notes">
+        <div class="nota-item" *ngFor="let notaControl of notes.controls; let i = index">
+          <input type="text" [formControlName]="i" [placeholder]="i === notes.length - 1 ? 'Escriu una nova nota...' : 'Nota ' + (i + 1)" class="input-nota" [class.invalid]="notaControl.invalid && notaControl.touched">
+          <button type="button" class="btn-eliminar-nota" (click)="eliminarNota(i)" *ngIf="i < notes.length - 1">✕</button>
+        </div>
+      </div>
+
+      <button type="button" class="btn-afegir-nota" (click)="afegirNota()" [disabled]="notes.at(notes.length - 1).invalid">Afegir nota</button>
+    </form>
+  </div>
+</div>

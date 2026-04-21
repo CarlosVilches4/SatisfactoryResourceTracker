@@ -1,7 +1,7 @@
 <div *ngIf="elementService.carregant() == false">
 
   <div class="contenedor-flex" *ngIf="this.elementService.elements().length > 0; else sinResultados">
-    <app-targeta-taladro *ngFor="let item of elementService.elements(); trackBy: elementService.trackById" [taladro]="item">
+    <app-targeta-taladro *ngFor="let item of elementService.elements(); trackBy: elementService.trackById" [taladro]="item" class="tarjeta">
     </app-targeta-taladro>
   </div>
 

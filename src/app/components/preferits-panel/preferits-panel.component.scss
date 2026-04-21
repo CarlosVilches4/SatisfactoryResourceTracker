@@ -14,10 +14,44 @@
 
 .llista-preferits {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 400px));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 450px));
     gap: 4em;
     padding: 2em;
     justify-content: center;
+    
+    .preferit-item {
+    border: #df7409 2px solid;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover {
+      border-color: orangered;
+      background-color: #a8acaf7e;
+    }
+
+    &.seleccionat {
+      border-color: orangered;
+      background-color: #a8acaf7e;
+    }
+
+    .btn-eliminar {
+      background: none;
+      border: none;
+      font-size: 1.3rem;
+      cursor: pointer;
+      padding: 0.5rem;
+      transition: transform 0.3s;
+
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
 }
 
 
@@ -33,5 +67,103 @@
   .ajuda {
     font-size: 0.9rem;
     color: #999;
+  }
+}
+
+.panel-notes {
+  border-top: 2px solid #eee;
+  padding-top: 1.5rem;
+
+  .notes-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+
+    h3 {
+      margin: 0;
+      color: #333;
+    }
+
+    .btn-tancar {
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: #999;
+      transition: color 0.3s;
+
+      &:hover {
+        color: #e74c3c;
+      }
+    }
+  }
+
+  .notes-llista {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+
+    .nota-item {
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+
+      .input-nota {
+        flex: 1;
+        padding: 0.75rem;
+        border: 2px solid #ddd;
+        border-radius: 4px;
+        font-size: 1rem;
+        transition: border-color 0.3s;
+
+        &:focus {
+          outline: none;
+          border-color: #3498db;
+        }
+
+        &.invalid {
+          border-color: #e74c3c;
+        }
+      }
+
+      .btn-eliminar-nota {
+        background-color: #e74c3c;
+        color: white;
+        border: none;
+        width: 32px;
+        height: 32px;
+        border-radius: 4px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s;
+
+        &:hover {
+          background-color: #c0392b;
+        }
+      }
+    }
+  }
+
+  .btn-afegir-nota {
+    width: 100%;
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover:not(:disabled) {
+      background-color: #229954;
+    }
+
+    &:disabled {
+      background-color: #bdc3c7;
+      cursor: not-allowed;
+    }
   }
 }
