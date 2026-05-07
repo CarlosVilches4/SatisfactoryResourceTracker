@@ -1,8 +1,22 @@
-<h1>Satisfactory Resource Tracker</h1>
-<app-formulari-cerca />
-<app-preferits-panel></app-preferits-panel>
-<div *ngIf="elementService.carregant() == true" class="spinner-container">
-  <div class="spinner"></div>
-</div>
-<app-lista-taladros></app-lista-taladros>
-<p>Carlos Vilches Siuro</p>
+<header>
+  <h1>Satisfactory Resource Tracker</h1>
+
+  <nav class="menu-principal">
+    <a routerLink="/taladros" routerLinkActive="actiu">Taladros</a>
+    <a routerLink="/cerca" routerLinkActive="actiu">Cerca</a>
+    <a routerLink="/preferits" routerLinkActive="actiu">Preferits</a>
+    <a routerLink="/login" routerLinkActive="actiu">Login</a>
+  </nav>
+</header>
+
+<main>
+  <router-outlet></router-outlet>
+  <div *ngIf="elementService.carregant() == true" class="spinner-container">
+    <div class="spinner"></div>
+  </div>
+</main>
+
+<footer>
+  <p>&copy; 2026 SRT Carlos Vilches Siuro</p>
+</footer>
+

@@ -1,0 +1,20 @@
+<h1>Detall</h1>
+<div *ngIf="taladro" class="detall-container">
+
+    <div class="text-container">
+        <p><strong>Id: </strong>{{taladro.id}}</p>
+        <p><strong>Tier taladro: </strong>{{ taladro.nom }}</p>
+        <p><strong>Material: </strong>{{taladro.material}}</p>
+        <p><strong>Puresa: </strong>{{taladro.puresa}}</p>
+        <p><strong>Color: </strong>{{ taladro.color }}</p>
+        <p><strong>Porcentaje Overclock: </strong>{{ taladro.percentatjeOverclock }}</p>
+        <p><strong>Material Utilitzat: </strong>{{taladro.materialUtilitzat}}</p>
+    </div>
+
+    <div class="img-container">
+        <img [src]='imgTaladroUrl' />
+        <img [src]='imgMaterialUrl' />
+    </div>
+
+
+</div>

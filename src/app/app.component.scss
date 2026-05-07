@@ -29,3 +29,28 @@ p{
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.menu-principal {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+
+  a {
+    color: #336b87;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: rgba(199, 81, 26, 0.1);
+    }
+
+    &.actiu {
+      background-color: rgba(255, 255, 255, 0.2);
+      font-weight: 600;
+      border-bottom: 2px solid white;
+    }
+  }
+}
+

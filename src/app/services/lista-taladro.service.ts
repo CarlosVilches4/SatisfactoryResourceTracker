@@ -4,7 +4,7 @@ import { environment } from '../../environments/environment.development';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { catchError, tap, map } from 'rxjs/operators';
 import { of, Observable } from 'rxjs';
-import { adaptarElementsApi } from '../adaptadors/taladro.adaptador';
+import { adaptarElementsApi, adaptarElementApi } from '../adaptadors/taladro.adaptador';
 
 @Injectable({
   providedIn: 'root'
@@ -111,6 +111,13 @@ export class ElementService {
   trackById(item: any) {
     return item.id;
   }
+
+  obtenirPerId(id: number): Observable<Taladro> {
+  return this.http.get<TaladroApiResponse>(`${this.apiUrl}/elements/${id}`)
+    .pipe(
+      map(adaptarElementApi)
+    );
+}
 
   private gestionarError(error: HttpErrorResponse): string {
     if (error.error instanceof ErrorEvent) {
