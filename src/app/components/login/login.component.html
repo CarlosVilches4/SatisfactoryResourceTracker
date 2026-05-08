@@ -1,37 +1,27 @@
 <div class="login-container">
   <div class="login-card">
-
     <div class="login-header">
       <h1>Iniciar sessió</h1>
-      <p>Accedeix al teu compte</p>
+      <p class="subtitol">Accedeix al teu compte</p>
     </div>
-
-    <form class="login-form">
-
-      <div class="form-group">
-        <label for="email">Correu electrònic</label>
-        <input
-          type="email"
-          id="email"
-          placeholder="exemple@email.com"
-        />
+    <form (ngSubmit)="login()" #loginForm="ngForm">
+      <div class="camp">
+        <label for="email">Email:</label>
+        <input type="email" id="email" [(ngModel)]="email" name="email" placeholder="nom@exemple.com" required
+          [disabled]="carregant">
       </div>
 
-      <div class="form-group">
-        <label for="password">Contrasenya</label>
-        <input
-          type="password"
-          id="password"
-          placeholder="••••••••"
-        />
+      <div class="camp">
+        <label for="password">Contrasenya:</label>
+        <input type="password" id="password" [(ngModel)]="password" name="password" placeholder="••••••••" required
+          [disabled]="carregant">
       </div>
 
+      <p *ngIf="error" class="error">{{ error }}</p>
 
-      <button type="submit" class="login-btn">
-        Entrar
+      <button type="submit" [disabled]="loginForm.invalid || carregant" class="btn-login">
+        {{ carregant ? 'Entrant...' : 'Entrar' }}
       </button>
-
     </form>
-
   </div>
 </div>

@@ -5,7 +5,18 @@
     <a routerLink="/taladros" routerLinkActive="actiu">Taladros</a>
     <a routerLink="/cerca" routerLinkActive="actiu">Cerca</a>
     <a routerLink="/preferits" routerLinkActive="actiu">Preferits</a>
-    <a routerLink="/login" routerLinkActive="actiu">Login</a>
+
+    <div class="auth-status" *ngIf="usuari$ | async as usuari; else noAutenticat">
+      <span class="usuari-nom">Hola, {{ usuari.nom }}</span>
+      <button (click)="logout()" class="btn-logout">Sortir</button>
+    </div>
+
+    <ng-template #noAutenticat>
+      <a routerLink="/login" routerLinkActive="actiu" class="btn-login">
+        Iniciar sessió
+      </a>
+    </ng-template>
+
   </nav>
 </header>
 
@@ -19,4 +30,3 @@
 <footer>
   <p>&copy; 2026 SRT Carlos Vilches Siuro</p>
 </footer>
-

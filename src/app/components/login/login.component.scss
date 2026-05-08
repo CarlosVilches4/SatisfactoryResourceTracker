@@ -36,38 +36,40 @@
     font-size: 0.95rem;
 }
 
-.login-form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.form-group {
+.camp {
     display: flex;
     flex-direction: column;
 }
 
-.form-group label {
-    margin-bottom: 8px;
+.camp label {
     font-weight: 600;
     color: #336b87;
 }
 
-.form-group input {
+.camp input {
     padding: 14px;
     border: 1px solid #cbd5e1;
     border-radius: 10px;
     font-size: 1rem;
     transition: all 0.2s ease;
+    margin: 10px;
 }
 
-.form-group input:focus {
+.camp input:focus {
     outline: none;
     border-color: #2563eb;
     box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.15);
 }
 
+.error{
+    color: red;
+    padding: 5px;
+}
+
 button{
+    width: 6em;
+    height: 2em;
+    color: white;
     background-color: #336b87;
     border: 0px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);

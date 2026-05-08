@@ -1,24 +1,37 @@
-import { Component, inject } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { Component, inject, OnInit } from '@angular/core';
+import { RouterModule, Router } from '@angular/router';
 import { NgIf } from '@angular/common';
-import { ListaTaladrosComponent } from './components/lista-taladro/lista-taladro.component';
 import { ElementService } from './services/lista-taladro.service';
-import { FormulariCercaComponent } from './components/formulari-cerca/formulari-cerca.component';
-import { PreferitsPanelComponent } from "./components/preferits-panel/preferits-panel.component";
+import { Observable } from 'rxjs';
+import { AuthService, Usuari } from './services/auth.service';
+import { AsyncPipe } from '@angular/common';
+
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterModule, ListaTaladrosComponent, NgIf, FormulariCercaComponent, PreferitsPanelComponent],
+  imports: [RouterModule, NgIf, AsyncPipe],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'SRT';
 
   elementService = inject(ElementService);
 
-  constructor(){
-    console.log("SRT: Started")
+  usuari$!: Observable<Usuari | null>;
+
+  constructor(
+    private authService: AuthService,
+    private router: Router
+  ) {}
+
+  ngOnInit(): void {
+    this.usuari$ = this.authService.obtenirUsuari();
+  }
+
+  logout(): void {
+    this.authService.logout();
+    this.router.navigate(['/']);
   }
 }
