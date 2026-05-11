@@ -1,27 +1,41 @@
 # SRT
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.21.
+## Descripció del projecte
 
-## Development server
+### Satisfactory Resource Tracker
+L'objectiu de l'aplicacó es portar un recompte dels materials utilitzats en el joc Satisfactory.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Mapa de rutes
 
-## Code scaffolding
+| Ruta | Component | Descripció | Accès |
+|------|-----------|-------| ------- |
+| `/` | — | Redirigeix a `/taladros` | Públic |
+| `/taladros` | ListaTaladrosComponent | LListat de taladros | Públic |
+| `/cerca` | FormulariCercaComponent | Cerca d'elements | Públic |
+| `/preferits` | PreferitsPanelComponent | Els meus preferits | Privat |
+| `/detall/:id`| DetallComponent | Detall d'un taladro passat per parametre de la URL | Públic |
+| `/login`| LoginComponent | Login | Públic |
+| `/**` | — | Redirigeix a `/taladros` (404) | Públic |
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Instruccions d'execució en local
 
-## Build
+- git clone [url-repositori]
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- cd [nom-projecte]
 
-## Running unit tests
+- npm install
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- ng serve
 
-## Running end-to-end tests
+- Obrir http://localhost:4200
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Build de producció
 
-## Further help
+Executar `ng build --configuration production` en el terminal
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Mida del bundle: Initial total | 391,31 NB kB | Estimated transfer size: 103,07 kB
+
+## Credencials de prova
+
+Email: `admin@test.com`
+Contrasenya: `1234`
