@@ -2,15 +2,15 @@
 
 ## Rutes definides
 
-| Ruta | Component | Descripció |
-|------|-----------|-------|
-| `/` | — | Redirigeix a `/taladros` |
-| `/taladros` | ListaTaladrosComponent | LListat de taladros |
-| `/cerca` | FormulariCercaComponent | Cerca d'elements |
-| `/preferits` | PreferitsPanelComponent | Els meus preferits |
-| `/detall/:id`| DetallComponent | Detall d'un taladro passat per parametre de la URL |
-| `/login`| LoginComponent | Login |
-| `/**` | — | Redirigeix a `/taladros` (404) |
+| Ruta | Component | Descripció | Accès |
+|------|-----------|-------| ------- |
+| `/` | — | Redirigeix a `/taladros` | Públic |
+| `/taladros` | ListaTaladrosComponent | LListat de taladros | Públic |
+| `/cerca` | FormulariCercaComponent | Cerca d'elements | Públic |
+| `/preferits` | PreferitsPanelComponent | Els meus preferits | Privat |
+| `/detall/:id`| DetallComponent | Detall d'un taladro passat per parametre de la URL | Públic |
+| `/login`| LoginComponent | Login | Públic |
+| `/**` | — | Redirigeix a `/taladros` (404) | Públic |
 
 ## Fitxers modificats
 
