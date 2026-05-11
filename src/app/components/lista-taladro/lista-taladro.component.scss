@@ -1,20 +1,28 @@
-.contenedor-flex {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 400px));
-    gap: 4em;
-    padding: 2em;
-    justify-content: center;
+.viewport {
+    margin: 10px;
+    height: 80vh;
+    width: 100%;
+    overflow-y:auto;
 }
 
-.tarjeta{
+app-targeta-taladro{
     border: #df7409 2px solid;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: block;
+    flex: 1;
 }
 
-.reintentarBtn{
+
+.reintentarBtn {
     background-color: #00ACC1;
     color: white;
     width: 6rem;
     height: 2rem;
     border: 1px solid #097f8f;
+}
+
+.fila {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 16px;
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, OnInit, inject, ChangeDetectionStrategy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ElementService } from '../../services/lista-taladro.service';
 import { Taladro } from '../../models/taladro.model';
@@ -9,7 +9,8 @@ import { NgIf } from '@angular/common';
   standalone: true,
   imports: [NgIf],
   templateUrl: './detall.component.html',
-  styleUrl: './detall.component.scss'
+  styleUrl: './detall.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 
 export class DetallComponent implements OnInit {

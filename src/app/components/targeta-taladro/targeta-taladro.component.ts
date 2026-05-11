@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
 import { UpperCasePipe } from '@angular/common';
 import { Taladro } from '../../models/taladro.model';
 import { PreferitsService } from '../../services/preferits.service';
@@ -10,6 +10,7 @@ import { PreferitsService } from '../../services/preferits.service';
   imports: [UpperCasePipe],
   templateUrl: './targeta-taladro.component.html',
   styleUrl: './targeta-taladro.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class TargetaTaladroComponent {
   @Input() taladro!: Taladro;
